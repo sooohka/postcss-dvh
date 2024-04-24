@@ -15,7 +15,6 @@ module.exports = () => {
           if (isNaN(value)) {
             throw decl.error(`fail to parse ${decl.value}`);
           }
-          console.log(decl.value, value);
           decl.before(` ${decl.prop}: ${value}vh`);
           decl.before(` ${decl.prop}: calc(var(--vh, 1vh) * ${value})`);
         }
